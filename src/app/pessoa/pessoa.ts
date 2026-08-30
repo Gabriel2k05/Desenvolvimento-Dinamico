@@ -9,4 +9,5 @@ import { Component } from '@angular/core';
 export class Pessoa {
   nome = "Gabriel";
   curso = "Análise e Desenvolvimento de Sistemas";
+  email = "gabrielmarx04@gmail.com";
 }
