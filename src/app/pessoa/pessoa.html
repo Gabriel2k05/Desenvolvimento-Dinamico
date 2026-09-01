@@ -1,3 +1,15 @@
-<h2>{{ nome }}</h2>
-<h2>{{ curso }}</h2>
-<h2>{{ email }}</h2>
+@for (pessoa of pessoas; track pessoa.id) {
+  <div class="card">
+    <h3>{{ pessoa.nome }}</h3>
+    <p>Vínculo: {{ pessoa.vinculo }}</p>
+    <p>Email: {{ pessoa.email }}</p>
+    <p>Curso: {{ pessoa.curso }}</p>
+    
+    <!-- Mostra o telefone apenas se ele existir -->
+    @if (pessoa.telefone) {
+      <p>Telefone: {{ pessoa.telefone }}</p>
+    }
+  </div>
+} @empty {
+  <p>Nenhuma pessoa encontrada na lista.</p>
+}
