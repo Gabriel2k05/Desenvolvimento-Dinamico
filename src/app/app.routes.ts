@@ -13,6 +13,7 @@ export const routes: Routes = [
     { path: 'home', component: Home },
     { path: 'pessoa', component: Pessoas }, 
     { path: 'integrantes', component: Integrantes}, // Componente solicitado pelo professor na primeira aula
+   
 
     { path: '**', component: NaoEncontrada} // Esse vai ser o componente exibido caso as outras não funcionem
 ];

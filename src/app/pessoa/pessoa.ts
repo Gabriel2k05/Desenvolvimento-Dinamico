@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { Pessoa } from './pessoa.model';
+import { validarCurso, validarEmail, validarTelefone } from './pessoa.validacao'; // Funções nao estao sendo chamadas, CORRIGIR
+
+
 
 @Component({
   selector: 'app-pessoa',
@@ -7,6 +10,8 @@ import { Pessoa } from './pessoa.model';
   templateUrl: './pessoa.html',
   styleUrl: './pessoa.css',
 })
+
+
 export class Pessoas {
 
   pessoas: Pessoa[] = [
@@ -14,7 +19,7 @@ export class Pessoas {
       id: 1,
       nome: "Gabriel",
       curso: "Análise e Desenvolvimento de Sistemas",
-      email: "gabrielmarx04@gmail.com",
+      email: "gabriel@gmail.com",
       ativo: true,
       vinculo: "aluno",
       telefone: "71999998888"
