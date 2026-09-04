@@ -1,15 +1,23 @@
-@for (pessoa of pessoas; track pessoa.id) {
-  <div class="card">
-    <h3>{{ pessoa.nome }}</h3>
-    <p>Vínculo: {{ pessoa.vinculo }}</p>
-    <p>Email: {{ pessoa.email }}</p>
-    <p>Curso: {{ pessoa.curso }}</p>
+@for (item of resultados; track item.pessoa.id) {
+  <div class="card" [class.invalido]="item.erros.length > 0">
+    <h3>{{ item.pessoa.nome }}</h3>
+    <p>Curso: {{ item.pessoa.curso }}</p>
+    <p>Email: {{ item.pessoa.email }}</p>
+    @if (item.pessoa.telefone) {
+      <p>Telefone: {{ item.pessoa.telefone }}</p>
+    }
     
-    <!-- Mostra o telefone apenas se ele existir -->
-    @if (pessoa.telefone) {
-      <p>Telefone: {{ pessoa.telefone }}</p>
+    <!-- Exibe a lista de erros se houver algum -->
+    @if (item.erros.length > 0) {
+      <div class="mensagens-erro">
+        <ul>
+          @for (erro of item.erros; track erro) {
+            <li>{{ erro }}</li>
+          }
+        </ul>
+      </div>
     }
   </div>
 } @empty {
-  <p>Nenhuma pessoa encontrada na lista.</p>
+  <p>Nenhuma pessoa encontrada.</p>
 }

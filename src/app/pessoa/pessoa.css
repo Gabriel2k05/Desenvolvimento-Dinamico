@@ -1,0 +1,6 @@
+.card.invalido {
+  border: 2px solid red;
+}
+.mensagens-erro {
+  color: red;
+}
