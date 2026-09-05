@@ -1,9 +1,10 @@
 <h2>Agenda Unijorge</h2>
 <nav class="menu">
-    <a routerLink="/"
-    routerLinkActive="ativo"
-    [routerLinkActiveOptions]="{exact: true }">
-    Inicio
-    </a>
+    <a class="ativo" routerLink="/home" routerLinkActive="ativo">Inicio</a>
+
+    <a routerLink="/pessoa" class="ativo" routerLinkActive="ativo">Pessoa</a> <!--routerLinkActive faz com que a classe CSS "ativo" seja acionada somente quando a rota é ativada-->
+
+    <a routerLink="/integrantes" class="ativo" routerLinkActive="ativo">Integrantes do grupo</a>
+    
 </nav>
 <router-outlet /> <!--Todo o conteúdo acima dessa tag é exibido SEMPRE, mesmo após a mudança de componentes-->
