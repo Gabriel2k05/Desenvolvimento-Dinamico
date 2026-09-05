@@ -14,7 +14,7 @@ export class Pessoas {
       id: 1,
       nome: "Gabriel",
       curso: "Análise e Desenvolvimento de Sistemas",
-      email: "gabrielmarx04@gmail.com",
+      email: "gabriel@gmail.com",
       ativo: true,
       vinculo: "aluno",
       telefone: "71999998888"
